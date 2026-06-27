@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Lets the frontend keep calling /api/price and /api/quote (instead of the
+# default /.netlify/functions/price path) — purely cosmetic, both work.
+[[redirects]]
+  from = "/api/price"
+  to = "/.netlify/functions/price"
+  status = 200
+
+[[redirects]]
+  from = "/api/quote"
+  to = "/.netlify/functions/quote"
+  status = 200
