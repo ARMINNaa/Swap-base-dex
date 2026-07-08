@@ -1,0 +1,9 @@
+[build]
+  base = "base-swap-dapp"
+  command = "npm run build"
+  publish = "base-swap-dapp/dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
